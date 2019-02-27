@@ -50,6 +50,19 @@ namespace PerfMeasurements
             sw.Stop();
             Trace.WriteLine($"List accessing:Total time elapsed={sw.ElapsedMilliseconds} ms");
         }
+        [TestMethod]
+        public void ListTraversal_Enumerable()
+        {
+            List<int> lstItems = new List<int>();
+            for (int i = 0; i < MAXITERATIONS; i++)
+            {
+                foreach(var o in lstItems)
+                {
+                    you were here
+                }
+            }
+
+        }
         /// <summary>
         /// Randomly populate integers
         /// </summary>
