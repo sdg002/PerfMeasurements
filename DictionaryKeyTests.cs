@@ -23,6 +23,7 @@ namespace PerfMeasurements
     public class DictionaryKeyTests
     {
         Random _rnd = new Random(DateTime.Now.Second);
+        const int MAXITEMS = 1000;
         public Random Rnd
         {
             get
@@ -30,10 +31,12 @@ namespace PerfMeasurements
                 return _rnd;
             }
         }
+        /// <summary>
+        /// Test a Dictionary<> where the key is of type "String"
+        /// </summary>
         [TestMethod]
         public void StringKey()
         {
-            const int MAXITEMS = 1000;
             string[] keys = new string[MAXITEMS];
             Dictionary<string, double> dict = new Dictionary<string, double>();
             ///
@@ -59,8 +62,11 @@ namespace PerfMeasurements
             sw.Stop();
             double elapsedTotal = sw.ElapsedMilliseconds;
             double elapsedAverage = elapsedTotal / MAXITERATIONS;
-            Trace.WriteLine($"Elapsed average={elapsedAverage} ms   Elapsed Total={elapsedTotal}");
+            Trace.WriteLine($"Elapsed average={elapsedAverage} ms   Elapsed Total={elapsedTotal} ms");
         }
+        /// <summary>
+        /// Test a Dictionary<> Dictionary where the key is of type "long"
+        /// </summary>
         [TestMethod]
         public void LongKey()
         {
@@ -91,7 +97,7 @@ namespace PerfMeasurements
             double elapsedTotal = sw.ElapsedMilliseconds;
             double elapsedAverage = elapsedTotal / MAXITERATIONS;
             Trace.WriteLine("Dictionary with long key");
-            Trace.WriteLine($"Elapsed average={elapsedAverage} ms   Elapsed Total={elapsedTotal}");
+            Trace.WriteLine($"Elapsed average={elapsedAverage} ms   Elapsed Total={elapsedTotal} ms");
 
         }
     }
