@@ -35,7 +35,7 @@ namespace PerfMeasurements
             double elapsedTotal = sw.ElapsedMilliseconds;
             double elapsedAverage = elapsedTotal / MAXITERATIONS;
             Trace.WriteLine("String.Concat method");
-            Trace.WriteLine($"Elapsed average={elapsedAverage} ms   Elapsed Total={elapsedTotal}");
+            Trace.WriteLine($"Elapsed average={elapsedAverage} ms   Elapsed Total={elapsedTotal} ms");
 
         }
         [TestMethod]
@@ -62,7 +62,33 @@ namespace PerfMeasurements
             double elapsedTotal = sw.ElapsedMilliseconds;
             double elapsedAverage = elapsedTotal / MAXITERATIONS;
             Trace.WriteLine("StringBuilder");
-            Trace.WriteLine($"Elapsed average={elapsedAverage} ms   Elapsed Total={elapsedTotal}");
+            Trace.WriteLine($"Elapsed average={elapsedAverage} ms   Elapsed Total={elapsedTotal} ms");
+        }
+        [TestMethod]
+        public void ConcatUsingStringSimpleAddition()
+        {
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+            for (int i = 0; i < MAXITERATIONS; i++)
+            {
+                long l1 = 100;
+                long l2 = 200;
+                long l3 = 300;
+                long l4 = 400;
+                long l5 = 500;
+                string sSimpleString = "";
+                sSimpleString+=(l1);
+                sSimpleString+=(l2);
+                sSimpleString += (l3);
+                sSimpleString += (l4);
+                sSimpleString += (l5);
+            }
+            sw.Stop();
+            double elapsedTotal = sw.ElapsedMilliseconds;
+            double elapsedAverage = elapsedTotal / MAXITERATIONS;
+            Trace.WriteLine("Simple addition");
+            Trace.WriteLine($"Elapsed average={elapsedAverage} ms   Elapsed Total={elapsedTotal} ms");
+
         }
         [TestMethod]
         public void DoLongMultiply()
@@ -83,7 +109,7 @@ namespace PerfMeasurements
             double elapsedTotal = sw.ElapsedMilliseconds;
             double elapsedAverage = elapsedTotal / MAXITERATIONS;
             Trace.WriteLine("DoLongMultiply");
-            Trace.WriteLine($"Elapsed average={elapsedAverage} ms   Elapsed Total={elapsedTotal}");
+            Trace.WriteLine($"Elapsed average={elapsedAverage} ms   Elapsed Total={elapsedTotal} ms");
         }
     }
 }
