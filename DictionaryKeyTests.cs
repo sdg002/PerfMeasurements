@@ -63,6 +63,7 @@ namespace PerfMeasurements
             double elapsedTotal = sw.ElapsedMilliseconds;
             double elapsedAverage = elapsedTotal / MAXITERATIONS;
             Trace.WriteLine($"Elapsed average={elapsedAverage} ms   Elapsed Total={elapsedTotal} ms");
+            Util.ThrowExceptionIfNot64BitAndNotRelease();
         }
         /// <summary>
         /// Test a Dictionary<> Dictionary where the key is of type "long"
@@ -98,7 +99,7 @@ namespace PerfMeasurements
             double elapsedAverage = elapsedTotal / MAXITERATIONS;
             Trace.WriteLine("Dictionary with long key");
             Trace.WriteLine($"Elapsed average={elapsedAverage} ms   Elapsed Total={elapsedTotal} ms");
-
+            Util.ThrowExceptionIfNot64BitAndNotRelease();
         }
     }
 }
