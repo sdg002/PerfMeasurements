@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="DictionaryKeyTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringConcat.cs" />
     <Compile Include="Util.cs" />
   </ItemGroup>
   <ItemGroup>
