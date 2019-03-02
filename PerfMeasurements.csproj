@@ -50,15 +50,6 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArrayBoundsTest.cs" />
-    <Compile Include="ArrayVsListItemAccessing.cs" />
-    <Compile Include="DictionaryKeyTests.cs" />
-    <Compile Include="DictionaryKeyTests1.cs" />
-    <Compile Include="FiledVsProp.cs" />
-    <Compile Include="IndexerPropertyVsArray.cs" />
-    <Compile Include="LinqTests.cs" />
-    <Compile Include="StringConcat.cs" />
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
