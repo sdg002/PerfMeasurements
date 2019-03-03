@@ -41,5 +41,16 @@ namespace PerfMeasurements
             }
             return results.ToArray();
         }
+        /// <summary>
+        /// Creates an array of strings with the specified count of random strings
+        /// </summary>
+        /// <param name="count"></param>
+        /// <returns></returns>
+        internal static string[] CreateRandomArrayOfString(int count)
+        {
+            int[] numbers = CreateRandomArrayOfInt(count);
+            string[] strings = numbers.Select(n => n.ToString()).ToArray();
+            return strings.ToArray();
+        }
     }
 }

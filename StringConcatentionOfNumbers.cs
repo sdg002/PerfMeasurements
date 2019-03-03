@@ -14,7 +14,7 @@ namespace PerfMeasurements
     /// 
     /// </summary>
     [TestClass]
-    public class StringConcat
+    public class StringConcatentionOfNumbers
     {
         const int MAXITERATIONS = 10000000;
         const int MAXCOUNTOF_INTEGERS = 20;
