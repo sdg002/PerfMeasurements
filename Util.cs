@@ -52,5 +52,16 @@ namespace PerfMeasurements
             string[] strings = numbers.Select(n => n.ToString()).ToArray();
             return strings.ToArray();
         }
+        internal static Employee[] CreateRandomArrayOfEmployees(int count)
+        {
+            List<Employee> lst = new List<Employee>();
+            for (int index = 0; index < count; index++)
+            {
+                var emp = new Employee();
+                emp.Age= _rnd.NextDouble() * 50 + 18;
+                lst.Add(emp);
+            };
+            return lst.ToArray();
+        }
     }
 }
