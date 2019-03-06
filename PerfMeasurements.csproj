@@ -50,6 +50,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CollectionAccessTests.cs" />
     <Compile Include="DictionaryKeyTests.cs" />
     <Compile Include="GetObjectWithMaxValue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
